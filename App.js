@@ -1,5 +1,5 @@
-const heading = React.createElement("h1", {}, "Heyyy!!");
-const heading2 = React.createElement("h2", {}, "React!!");
+const heading = React.createElement("h1", { id: "title" }, "Heyyy!!");
+const heading2 = React.createElement("h2", { id: "title" }, "React!!");
 const container = React.createElement("div", { id: "container" }, [
   heading,
   heading2,

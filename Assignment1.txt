@@ -1,0 +1,115 @@
+1. Emmet:
+
+    Emmet is a built-in feature in Visual Studio Code. Emmet prevents you from writing the entire code by yourself by providing Emmet abbreviations. Emmet is enabled by default in HTML, CSS, less, etc.,
+        https://www.geeksforgeeks.org/emmet-in-visual-studio-code/
+
+        e.g. div.cls#myDiv --> <div class = "cls" id = "myDiv"></div>
+
+2. Library vs framework:
+
+    A library is like building your home from the ground up. The house can be made in any style you prefer and the rooms can be arranged and decorated however you like. Framework, on the other hand, is like buying a new home. The house is already built, so you don’t have to worry about building problems, but you can’t choose how the rooms are arranged.
+
+    Essentially, both the library and the Framework are reusable pieces of code written by developers to solve complicated problems. What differentiates the two terms is “Who’s calling whom”.
+
+    
+    Difference:
+
+        the user-supplied code is plugged into the framework code and, thus, the framework controls the flow of the program.
+
+        the library code is plugged into the user-supplied code and, thus, you can control the flow of the program.
+
+    Key Difference:
+
+            Put simply, the “Inversion of Control” (IoC) describes the difference between a library and a framework. In some ways, you can think of a framework as a collection of libraries, but it’s entirely different. By using a library, you control the flow of the program. The library can be invoked whenever and wherever you like. Contrary to this, when you use a framework, the flow is controlled by the framework. The framework instructs you where to put your code, but it will call your code as required. Simply put, our code calls the library’s code, but in a framework, it’s the framework’s code that calls our code
+
+    As a result of using a software framework, you can focus on high-level functionalities, while the low-level functions are handled by the framework itself.
+
+    Why do we need a library?
+    There is only one answer to this question, and that is to reuse the code
+
+        https://www.interviewbit.com/blog/framework-vs-library/
+
+
+3. CDNs:
+
+    A content delivery network (CDN) is a group of geographically distributed servers that speed up the delivery of web content by bringing it closer to where users are. Data centers across the globe use caching, a process that temporarily stores copies of files so that you can access internet content from a web-enabled device or browser more quickly through a server near you. CDNs cache content like web pages, images, and videos in proxy servers near your physical location. This allows you to do things like watch a movie, download software, check your bank balance, post on social media, or make purchases, without having to wait for content to load.
+
+    You could think of a CDN as an ATM
+    
+    Why CDNs?
+
+        CDN services were created to solve the problem of network congestion caused by delivering rich web content, such as graphics and video over the internet — much like a traffic jam. Getting content from centrally located servers to individual users simply took too long. 
+
+        The mission of a CDN is to reduce latency. Latency is that annoying delay you experience when trying to access a web page or video stream before it fully loads on your device.
+
+        e.g. 
+
+            If you were in New York and wanted to view the website of your favorite store in London that’s hosted on a server in the UK, you would experience slow content load times if the request had to travel all the way across the Atlantic Ocean. To remedy this, a CDN would store a cached version of the London website content in multiple geographical locations around the world, also called “points of presence” (PoPs). These PoPs contain their own caching servers and are responsible for delivering that content close to where you’re located in New York.
+
+        For over 20 years, CDNs have formed the unseen backbone of the internet
+
+    https://www.akamai.com/our-thinking/cdn/what-is-a-cdn
+
+4. Why is React known as React?
+
+        we can change the state of our components and React will automatically update the DOM to match that state. And that's exactly why this library is called React, because when the state changes, React essentially reacts to the state change and updates the DOM.
+
+            Credits: Mosh
+            also refer: https://reactjs.org/blog/2013/06/05/why-react.html
+
+5. What is cross-origin in the script tag?
+
+        Normal script elements pass minimal information to the window.onerror for scripts that do not pass the standard CORS checks. To allow error logging for sites that use a separate domain for static media, use this attribute. See CORS settings attributes for a more descriptive explanation of the valid arguments.
+
+            link: https://stackoverflow.com/questions/47103818/react-crossorigin-in-script-tag
+
+        Cross-Origin Resource Sharing (CORS) is an HTTP-header-based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources. CORS also relies on a mechanism by which browsers make a "preflight" request to the server hosting the cross-origin resource, in order to check that the server will permit the actual request. In that preflight, the browser sends headers that indicate the HTTP method and headers that will be used in the actual request.
+
+        The CORS mechanism supports secure cross-origin requests and data transfers between browsers and servers. Modern browsers use CORS in APIs such as XMLHttpRequest or Fetch to mitigate the risks of cross-origin HTTP requests.
+
+            refer: https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin   
+                    https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS    (very good)
+
+6. What is the difference between React and ReactDOM?
+
+
+        Fundamentally, the idea of React has nothing to do with browsers, they just happen to be one of many targets for rendering trees of components. The ReactDOM package has allowed the developers to remove any non-essential code from the React package and move it into a more appropriate repository.
+
+        the react package is required to create and use components and hooks, react-dom contains react-dom/client and react-dom/server to render your app in the browser's DOM or inside a string (or a stream) on the server. With react-native, you can use React to create native apps for Android and iOS. (latest answer)
+
+            https://stackoverflow.com/questions/34114350/react-vs-reactdom
+            refer: https://www.geeksforgeeks.org/how-react-and-reactdom-works/
+
+7. What is difference between react.development.js and react.production.js files via CDN?
+
+        The development versions are only meant for development and are not suitable for production. Minified and optimized production versions of React are used for production.
+
+            https://reactjs.org/docs/cdn-links.html
+
+8. Async vs defer:
+
+    A boolean attribute in the script tag - to load external scripts efficiently into our web page
+
+        when web pages are loaded, two things happen 
+
+            * HTML parsing 
+            * loading of the script
+                * fetching
+                * executing line by line
+            * without async or defer, the browser loads the scripts whenever it encounters the script tag.
+                * This blocks the rendering of the page. 
+
+        Async:
+
+        * Scripts are fetched from the network along with the HTML parsing asynchronously.
+        * Scripts are executed after the fetching is done -- HTML parsing is stopped during this time.
+
+        Defer:
+
+        * Scripts are fetched parallelly from the network along with the HTML parsing asynchronously.
+        * Scripts are executed after the parsing is done.
+        * it does not matter when the scripts are available in the browser.
+
+        refer: https://www.youtube.com/watch?v=IrHmpdORLu8
+
+        
